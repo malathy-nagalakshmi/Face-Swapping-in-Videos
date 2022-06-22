@@ -1,9 +1,8 @@
 # Face-Swapping-in-Videos
 
-The goal of this project is to automatically detect and swap faces between two videos. Our approach follows the following basic steps - We first break down our videos into frames and detect the facial landmarks, we then perform frame-wise stabilization using 68- point detector. We then swap faces between the frames of the two videos using Delaunay triangulation. We then perform blending to blend the swapped face with the rest of the video and finally we stitch the frames to get the resultant video.
+Our approach follows the following basic steps - We first break down our videos into frames and detect the facial landmarks, we then perform frame-wise stabilization using 68- point detector. We then swap faces between the frames of the two videos using Delaunay triangulation. We then perform blending to blend the swapped face with the rest of the video and finally we stitch the frames to get the resultant video.
 
 ## Implementation Details- 
-The project mainly consists of the following steps-
 
 - Face and Facial Landmarks Detection: In this step, we detect faces within a given frame of the video and further proceed to identify the facial landmarks within the detected face. Facial landmark points are precisely extracted from the face images to allow for efficient swapping of faces while maintaining realism. 
 - Stabilization: In this function, histogram equalization is initially performed to adjust the global contrast by updating the pixel intensity distribution of the image’s histogram. Doing so enables areas of low contrast to obtain higher contrast in the output image. The inter-eye distance is then estimated to account for facial contortions. 
@@ -24,4 +23,4 @@ The project mainly consists of the following steps-
 
 - Download all packages mentioned.
 - Just specify the paths for source and target video and then run all the cells in the notebook FaceSwapping.ipynb. 
-- For the extra credit, specify the path for the video and run all the cells in FaceSwappinginSameVideo.ipynb.
+- For swapping faces in the same video, specify the path for the video and run all the cells in FaceSwappinginSameVideo.ipynb.
